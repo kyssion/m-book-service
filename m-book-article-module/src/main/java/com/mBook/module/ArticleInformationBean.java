@@ -1,17 +1,17 @@
 package com.mBook.module;
 
-import com.mBook.articleEnum.ArtocleTypeEnum;
+import com.mBook.articleEnum.ArticleTypeEnum;
 
 import java.io.Serializable;
 
-public class ArtocleInformationBean implements Serializable {
+public class ArticleInformationBean implements Serializable {
     private String articleName;
     private long addTime;
     private String articleTheme;
     private String articleFrom;
-    private ArtocleTypeEnum addType;
+    private ArticleTypeEnum addType;
     private String articleClassification;//文章分类
-    private String article;//文章内容markdown格式
+    private String articleUrl;//文章url地址 markdown格式
     private String customStyle;//自定义样式
 
     public String getCustomStyle() {
@@ -46,11 +46,11 @@ public class ArtocleInformationBean implements Serializable {
         this.articleFrom = articleFrom;
     }
 
-    public ArtocleTypeEnum getAddType() {
+    public ArticleTypeEnum getAddType() {
         return addType;
     }
 
-    public void setAddType(ArtocleTypeEnum addType) {
+    public void setAddType(ArticleTypeEnum addType) {
         this.addType = addType;
     }
 
@@ -62,12 +62,12 @@ public class ArtocleInformationBean implements Serializable {
         this.articleClassification = articleClassification;
     }
 
-    public String getArticle() {
-        return article;
+    public String getArticleUrl() {
+        return articleUrl;
     }
 
-    public void setArticle(String article) {
-        this.article = article;
+    public void setArticleUrl(String articleUrl) {
+        this.articleUrl = articleUrl;
     }
 
     public String getArticleName() {

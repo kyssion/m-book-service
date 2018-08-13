@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@DubboComponentScan("com.mBook.application.controller")
+@DubboComponentScan("com.mBook.application")
 public class MBookControllerApplication {
     public static void main(String[] args) {
         SpringApplication.run(MBookControllerApplication.class);
