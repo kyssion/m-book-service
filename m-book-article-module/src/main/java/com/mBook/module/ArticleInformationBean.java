@@ -9,17 +9,19 @@ public class ArticleInformationBean implements Serializable {
     private long addTime;
     private String articleTheme;
     private String articleFrom;
-    private ArticleTypeEnum addType;
+    private ArticleTypeEnum fromType;
     private String articleClassification;//文章分类
-    private String articleUrl;//文章url地址 markdown格式
+    private String url;//文章url地址 markdown格式
     private String customStyle;//自定义样式
+    private String articleImg;//文章地址url
+    private String articleIntroduction;//文章简介
 
-    public String getCustomStyle() {
-        return customStyle;
+    public String getArticleName() {
+        return articleName;
     }
 
-    public void setCustomStyle(String customStyle) {
-        this.customStyle = customStyle;
+    public void setArticleName(String articleName) {
+        this.articleName = articleName;
     }
 
     public long getAddTime() {
@@ -46,12 +48,12 @@ public class ArticleInformationBean implements Serializable {
         this.articleFrom = articleFrom;
     }
 
-    public ArticleTypeEnum getAddType() {
-        return addType;
+    public ArticleTypeEnum getFromType() {
+        return fromType;
     }
 
-    public void setAddType(ArticleTypeEnum addType) {
-        this.addType = addType;
+    public void setFromType(ArticleTypeEnum fromType) {
+        this.fromType = fromType;
     }
 
     public String getArticleClassification() {
@@ -62,19 +64,35 @@ public class ArticleInformationBean implements Serializable {
         this.articleClassification = articleClassification;
     }
 
-    public String getArticleUrl() {
-        return articleUrl;
+    public String getUrl() {
+        return url;
     }
 
-    public void setArticleUrl(String articleUrl) {
-        this.articleUrl = articleUrl;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
-    public String getArticleName() {
-        return articleName;
+    public String getCustomStyle() {
+        return customStyle;
     }
 
-    public void setArticleName(String articleName) {
-        this.articleName = articleName;
+    public void setCustomStyle(String customStyle) {
+        this.customStyle = customStyle;
+    }
+
+    public String getArticleImg() {
+        return articleImg;
+    }
+
+    public void setArticleImg(String articleImg) {
+        this.articleImg = articleImg;
+    }
+
+    public String getArticleIntroduction() {
+        return articleIntroduction;
+    }
+
+    public void setArticleIntroduction(String articleIntroduction) {
+        this.articleIntroduction = articleIntroduction;
     }
 }

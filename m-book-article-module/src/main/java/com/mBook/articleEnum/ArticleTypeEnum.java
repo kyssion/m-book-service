@@ -1,7 +1,7 @@
 package com.mBook.articleEnum;
 
 public enum  ArticleTypeEnum {
-    BLOWEBSIE("博客网站",1),NEWSWEBSTIE("新闻网站",2),SHOPPINGWEBSITE("购物网站",3),SOCIALWEBSITE("社交网站",4),ORTHERWEBSITE("其他网站",100);
+    BLOWEBSIE("博客网站",1),NEWSWEBSTIE("新闻网站",2),SHOPPINGWEBSITE("购物网站",3),SOCIALWEBSITE("社交网站",4),ORTHERWEBSITE("其他网站",100),USERUPDATE("用户上传",5);
     private String TypeName;
     private int index;
     ArticleTypeEnum(String typeName,int index){
