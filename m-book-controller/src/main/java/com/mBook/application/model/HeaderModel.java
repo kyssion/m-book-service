@@ -2,16 +2,12 @@ package com.mBook.application.model;
 
 import com.mBook.application.status.HeaderStatus;
 
-public class HeaderModel {
+public class HeaderModel implements Cloneable{
     private HeaderStatus header;
     private Object body;
-
+    public static final HeaderModel copyModel = new HeaderModel();
     public HeaderModel(){
         super();
-    }
-    public HeaderModel(HeaderStatus status,Object body){
-        this.header = status;
-        this.body = body;
     }
 
     public Object getBody() {
@@ -28,5 +24,12 @@ public class HeaderModel {
 
     public void setHeader(HeaderStatus header) {
         this.header = header;
+    }
+
+    public static HeaderModel createHeaderModel(HeaderStatus status,Object body) throws CloneNotSupportedException {
+        HeaderModel model = (HeaderModel) copyModel.clone();
+        model.setHeader(status);
+        model.setBody(body);
+        return model;
     }
 }

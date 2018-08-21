@@ -22,7 +22,6 @@ public class ArticleInformationImp implements ArticleInterface {
         bean.setCustomStyle("{格式未知}");
         bean.setArticleIntroduction("文章简介");
         bean.setArticleImg("文章图片");
-        int a=1/0;
         return bean;
     }
 }
