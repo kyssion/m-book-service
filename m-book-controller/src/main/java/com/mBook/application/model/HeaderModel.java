@@ -6,6 +6,14 @@ public class HeaderModel {
     private HeaderStatus header;
     private Object body;
 
+    public HeaderModel(){
+        super();
+    }
+    public HeaderModel(HeaderStatus status,Object body){
+        this.header = status;
+        this.body = body;
+    }
+
     public Object getBody() {
         return body;
     }

@@ -4,7 +4,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum  HeaderStatus {
-    OK("成功",200);
+    OK("成功",200),
+    ERROR("系统内部错误",500);
     private String desc;
     private int code;
     HeaderStatus(String desc,int code){
