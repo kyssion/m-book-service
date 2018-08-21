@@ -1,11 +1,10 @@
 package com.mBook.application.dubboInterfaceImp;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.mBook.articleEnum.ArticleTypeEnum;
 import com.mBook.articleInterface.ArticleInterface;
+import com.mBook.mBookEnum.article.ArticleTypeEnum;
 import com.mBook.module.ArticleInformationBean;
 
-import java.io.IOException;
 
 @Service
 public class ArticleInformationImp implements ArticleInterface {

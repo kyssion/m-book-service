@@ -1,6 +1,7 @@
 package com.mBook.module;
 
-import com.mBook.articleEnum.ArticleTypeEnum;
+
+import com.mBook.mBookEnum.article.ArticleTypeEnum;
 
 import java.io.Serializable;
 
@@ -8,7 +9,7 @@ public class ArticleInformationBean implements Serializable {
     private String articleName;
     private long addTime;
     private String articleTheme;
-    private String articleFrom;
+    private String articleFrom;//来源如果是用户自己编写的将会是用户的名称
     private ArticleTypeEnum fromType;
     private String articleClassification;//文章分类
     private String url;//文章url地址 markdown格式
