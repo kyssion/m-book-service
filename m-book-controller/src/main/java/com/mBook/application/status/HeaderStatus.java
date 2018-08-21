@@ -1,7 +1,8 @@
-package com.mBook.application.code;
+package com.mBook.application.status;
 
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
+@JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum  HeaderStatus {
     OK("成功",200);
     private String desc;
@@ -11,7 +12,6 @@ public enum  HeaderStatus {
         this.code = code;
     }
 
-    @JsonValue
     public String getDesc() {
         return desc;
     }
@@ -20,7 +20,6 @@ public enum  HeaderStatus {
         this.desc = desc;
     }
 
-    @JsonValue
     public int getCode() {
         return code;
     }

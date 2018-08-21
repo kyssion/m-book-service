@@ -1,6 +1,6 @@
 package com.mBook.application.model;
 
-import com.mBook.application.code.HeaderStatus;
+import com.mBook.application.status.HeaderStatus;
 
 public class HeaderModel {
     private HeaderStatus header;
