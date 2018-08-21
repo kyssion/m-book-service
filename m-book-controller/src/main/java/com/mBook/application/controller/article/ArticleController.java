@@ -1,5 +1,7 @@
 package com.mBook.application.controller.article;
 
+import com.mBook.application.code.HeaderStatus;
+import com.mBook.application.model.HeaderModel;
 import com.mBook.application.service.ArticleService;
 import com.mBook.module.ArticleInformationBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +15,10 @@ public class ArticleController {
     ArticleService articleService;
 
     @RequestMapping("get_ariticle")
-    public ArticleInformationBean getAriticle(){
-        return articleService.getNeedArticleInformationBean();
+    public HeaderModel getAriticle(){
+        HeaderModel headerModel= new HeaderModel();
+        headerModel.setHeader(HeaderStatus.OK);
+        headerModel.setBody(articleService.getNeedArticleInformationBean());
+        return headerModel;
     }
 }
