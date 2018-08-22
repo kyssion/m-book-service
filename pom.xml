@@ -12,6 +12,8 @@
         <module>m-book-article-module</module>
         <module>m-book-article-interface</module>
         <module>m-book-user-service</module>
+        <module>m-book-user-module</module>
+        <module>m-book-user-interface</module>
     </modules>
     <packaging>pom</packaging>
 

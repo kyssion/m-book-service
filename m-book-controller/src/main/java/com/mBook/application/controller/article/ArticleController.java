@@ -3,7 +3,6 @@ package com.mBook.application.controller.article;
 import com.mBook.application.model.HeaderModel;
 import com.mBook.application.service.ArticleService;
 import com.mBook.application.status.HeaderStatus;
-import com.mBook.module.ArticleInformationBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMapping;

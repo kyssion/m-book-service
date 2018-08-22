@@ -3,7 +3,7 @@ package com.mBook.application.dubboInterfaceImp;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.mBook.articleInterface.ArticleInterface;
 import com.mBook.mBookEnum.article.ArticleTypeEnum;
-import com.mBook.module.ArticleInformationBean;
+import com.mBook.module.articleModule.ArticleInformationBean;
 
 
 @Service

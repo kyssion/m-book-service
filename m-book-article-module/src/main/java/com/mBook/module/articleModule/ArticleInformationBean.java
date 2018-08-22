@@ -1,4 +1,4 @@
-package com.mBook.module;
+package com.mBook.module.articleModule;
 
 
 import com.mBook.mBookEnum.article.ArticleTypeEnum;

@@ -9,13 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>m-book-user-service</artifactId>
+    <artifactId>m-book-user-interface</artifactId>
+
     <dependencies>
         <dependency>
             <groupId>com.service</groupId>
-            <artifactId>m-book-user-interface</artifactId>
+            <artifactId>m-book-user-module</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
-
 </project>

@@ -2,7 +2,7 @@ package com.mBook.application.service;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.mBook.articleInterface.ArticleInterface;
-import com.mBook.module.ArticleInformationBean;
+import com.mBook.module.articleModule.ArticleInformationBean;
 import org.springframework.stereotype.Service;
 
 @Service
