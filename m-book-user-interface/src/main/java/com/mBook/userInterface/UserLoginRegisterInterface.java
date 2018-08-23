@@ -2,7 +2,7 @@ package com.mBook.userInterface;
 
 import com.mBook.module.userModule.UserBean;
 
-public interface UserInterface {
+public interface UserLoginRegisterInterface {
     /**
      * ·判断用户的信息是否正确
      * @param userBean

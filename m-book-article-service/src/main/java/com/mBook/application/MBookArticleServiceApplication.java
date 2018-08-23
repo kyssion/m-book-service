@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.io.IOException;
 
 @SpringBootApplication
-@DubboComponentScan("com.mBook.application.dubboInterfaceImp")
+@DubboComponentScan("com.mBook.application.articleInterfaceImp")
 public class MBookArticleServiceApplication {
     public static void main(String[] args) throws IOException {
         SpringApplication.run(MBookArticleServiceApplication.class);

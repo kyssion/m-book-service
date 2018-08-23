@@ -1,4 +1,4 @@
-package com.mBook.application.dubboInterfaceImp;
+package com.mBook.application.articleInterfaceImp;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.mBook.articleInterface.ArticleInterface;
