@@ -1,6 +1,7 @@
 package com.mBook.application.controller.article;
 
 import com.mBook.application.model.HeaderModel;
+import com.mBook.application.model.Page;
 import com.mBook.application.model.TestModel;
 import com.mBook.application.service.ArticleService;
 import com.mBook.application.status.HeaderStatus;
@@ -17,16 +18,16 @@ public class ArticleController {
     @Autowired
     ArticleService articleService;
 
-    @RequestMapping("get_ariticle")
-    public HeaderModel getAriticle() throws CloneNotSupportedException {
-        return HeaderModel.createHeaderModel(HeaderStatus.OK,articleService.getNeedArticleInformationBean());
-    }
     @RequestMapping("test")
-    public HeaderModel getAriticle2(){
-        TestModel headerModel= new TestModel();
-        headerModel.setHeader(HeaderStatus.OK);
-        headerModel.setBody(null);
-        headerModel.setHhh(null);
-        return headerModel;
+    public HeaderModel getAriticle() {
+        return HeaderModel.getHeaderModel(HeaderStatus.OK,articleService.getNeedArticleInformationBean());
+    }
+    @RequestMapping("test2")
+    public HeaderModel getAriticle2()  {
+        return HeaderModel.getHeaderModel(HeaderStatus.OK,articleService.getNeedArticleInformationBean(),new Page(1,2,3));
+    }
+    @RequestMapping("test3")
+    public HeaderModel getAriticle3()  {
+        return HeaderModel.getHeaderModel(400,"sdfsdf",articleService.getNeedArticleInformationBean(),new Page(1,2,3));
     }
 }

@@ -4,7 +4,14 @@ public class Page {
     private int page;
     private int size;
     private int allPage;
-
+    public Page(){
+        super();
+    }
+    public Page(int page,int size,int allPage){
+        this.page=page;
+        this.size=size;
+        this.allPage=allPage;
+    }
     public int getPage() {
         return page;
     }

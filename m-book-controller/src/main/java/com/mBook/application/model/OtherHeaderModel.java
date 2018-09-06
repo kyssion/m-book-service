@@ -3,12 +3,13 @@ package com.mBook.application.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class OtherHeaderModel extends HeaderModel {
-    private static final OtherHeaderModel baseModel = new OtherHeaderModel();
-    private static final OtherHeaderStatus baseStatus = new OtherHeaderStatus();
+    public static final OtherHeaderModel baseModel = new OtherHeaderModel();
+
     @JsonProperty("header")
     private OtherHeaderStatus OtherHeaderStatus;
 
-    private static class OtherHeaderStatus implements Cloneable {
+    public static class OtherHeaderStatus implements Cloneable {
+        private static final OtherHeaderStatus baseStatus= new OtherHeaderStatus();
         private int code;
         private String desc;
 
@@ -32,9 +33,13 @@ public class OtherHeaderModel extends HeaderModel {
             this.code = code;
             this.desc = desc;
         }
-
-        public OtherHeaderStatus clone() {
-            return this.clone();
+        public static OtherHeaderStatus getClone(){
+            try {
+                return (OtherHeaderModel.OtherHeaderStatus) baseStatus.clone();
+            } catch (CloneNotSupportedException e) {
+                e.printStackTrace();
+            }
+            return new OtherHeaderStatus();
         }
     }
 
@@ -70,9 +75,15 @@ public class OtherHeaderModel extends HeaderModel {
         OtherHeaderStatus = otherHeaderStatus;
     }
 
-    public static HeaderModel getOtherHeaderModel(int code, String desc, Object body, Page page) throws Exception {
-        OtherHeaderModel model = (OtherHeaderModel) baseModel.clone();
-        model.setOtherHeaderStatus();
+    public static HeaderModel getOtherHeaderModel(int code, String desc, Object body, Page page) {
+        OtherHeaderModel model = null;
+        try {
+            model = (OtherHeaderModel) baseModel.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        model=new OtherHeaderModel();
+        model.setOtherHeaderStatus(com.mBook.application.model.OtherHeaderModel.OtherHeaderStatus.clone);
         model.getOtherHeaderStatus().setInformation(code,desc);
         model.setBody(body);
         model.setPages(page);

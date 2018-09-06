@@ -21,6 +21,6 @@ public class BaseExceptionHandlerAdvice {
     public HeaderModel handle(Exception e) throws CloneNotSupportedException {
         logger.info("mBook全局错误拦截,抛出异常：{}",e.getMessage());
         e.printStackTrace();
-        return HeaderModel.createHeaderModel(HeaderStatus.ERROR,"");
+        return HeaderModel.getHeaderModel(HeaderStatus.ERROR);
     }
 }
