@@ -1,6 +1,7 @@
 package com.mBook.application.controller.article;
 
 import com.mBook.application.model.HeaderModel;
+import com.mBook.application.model.TestModel;
 import com.mBook.application.service.ArticleService;
 import com.mBook.application.status.HeaderStatus;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,11 +22,11 @@ public class ArticleController {
         return HeaderModel.createHeaderModel(HeaderStatus.OK,articleService.getNeedArticleInformationBean());
     }
     @RequestMapping("test")
-    @ResponseStatus(value=HttpStatus.INTERNAL_SERVER_ERROR,reason="no no no")
     public HeaderModel getAriticle2(){
-        HeaderModel headerModel= new HeaderModel();
+        TestModel headerModel= new TestModel();
         headerModel.setHeader(HeaderStatus.OK);
-        headerModel.setBody(articleService.getNeedArticleInformationBean());
+        headerModel.setBody(null);
+        headerModel.setHhh(null);
         return headerModel;
     }
 }

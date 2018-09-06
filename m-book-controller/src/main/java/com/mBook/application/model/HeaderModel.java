@@ -1,8 +1,15 @@
 package com.mBook.application.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.mBook.application.status.HeaderStatus;
 
-public class HeaderModel implements Cloneable{
+import java.io.Serializable;
+
+/**
+ * null 不显示
+ */
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class HeaderModel implements Cloneable, Serializable {
     private HeaderStatus header;
     private Object body;
     public static final HeaderModel copyModel = new HeaderModel();
