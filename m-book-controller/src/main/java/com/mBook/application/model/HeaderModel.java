@@ -1,7 +1,8 @@
 package com.mBook.application.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.mBook.application.status.HeaderStatus;
-
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class HeaderModel implements Cloneable {
     private HeaderStatus status;
     private Object body;

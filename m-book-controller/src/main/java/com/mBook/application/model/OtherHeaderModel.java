@@ -6,8 +6,7 @@ public class OtherHeaderModel extends HeaderModel {
     public static final OtherHeaderModel baseModel = new OtherHeaderModel();
 
     @JsonProperty("header")
-    private OtherHeaderStatus OtherHeaderStatus;
-
+    private OtherHeaderStatus headerStatus;
     public static class OtherHeaderStatus implements Cloneable {
         private static final OtherHeaderStatus baseStatus= new OtherHeaderStatus();
         private int code;
@@ -57,8 +56,8 @@ public class OtherHeaderModel extends HeaderModel {
 
     public OtherHeaderModel(int code, String desc, Object body, Page page) {
         this.setHeader(null);
-        this.OtherHeaderStatus.setCode(code);
-        this.OtherHeaderStatus.setDesc(desc);
+        this.headerStatus.setCode(code);
+        this.headerStatus.setDesc(desc);
         this.setBody(body);
         this.setPages(page);
     }
@@ -67,12 +66,12 @@ public class OtherHeaderModel extends HeaderModel {
         return baseModel;
     }
 
-    public OtherHeaderModel.OtherHeaderStatus getOtherHeaderStatus() {
-        return OtherHeaderStatus;
+    public OtherHeaderStatus getHeaderStatus() {
+        return headerStatus;
     }
 
-    public void setOtherHeaderStatus(OtherHeaderModel.OtherHeaderStatus otherHeaderStatus) {
-        OtherHeaderStatus = otherHeaderStatus;
+    public void setHeaderStatus(OtherHeaderStatus headerStatus) {
+        this.headerStatus = headerStatus;
     }
 
     public static HeaderModel getOtherHeaderModel(int code, String desc, Object body, Page page) {
@@ -83,8 +82,8 @@ public class OtherHeaderModel extends HeaderModel {
             e.printStackTrace();
         }
         model=new OtherHeaderModel();
-        model.setOtherHeaderStatus(com.mBook.application.model.OtherHeaderModel.OtherHeaderStatus.clone);
-        model.getOtherHeaderStatus().setInformation(code,desc);
+        model.setHeaderStatus(OtherHeaderStatus.getClone());
+        model.getHeaderStatus().setInformation(code,desc);
         model.setBody(body);
         model.setPages(page);
         return model;
