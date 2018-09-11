@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.mBook.application.status.HeaderStatus;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class HeaderModel implements Cloneable {
-    private HeaderStatus status;
+    private HeaderStatus header;
     private Object body;
     private Page pages;
     public static final HeaderModel copyModel = new HeaderModel();
@@ -23,26 +23,30 @@ public class HeaderModel implements Cloneable {
 
     public HeaderModel(HeaderStatus status, Object body, Page page) {
         if (status == null) {
-            this.status = status;
+            this.header = status;
             this.body = body;
             this.pages = page;
         }
     }
 
-//    public Object getBody() {
-//        return body;
-//    }
+    public Object getBody() {
+        return body;
+    }
+
+    public static HeaderModel getCopyModel() {
+        return copyModel;
+    }
 
     public void setBody(Object body) {
         this.body = body;
     }
 
     public HeaderStatus getHeader() {
-        return status;
+        return header;
     }
 
     public void setHeader(HeaderStatus status) {
-        this.status = status;
+        this.header = status;
     }
 
     public Page getPages() {
