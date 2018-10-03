@@ -1,0 +1,3 @@
+com/mBook/application/MBookUserServiceApplication.class
+com/mBook/application/userInterfaceImp/UserLoginRegisterImp.class
+com/mBook/application/config/UserServiceConfig.class
