@@ -1,7 +1,7 @@
 package com.mBook.application.model;
 
 
-public class TestModel extends HeaderModel{
+public class TestModel extends ResponseModel{
     private String hhh;
 
     public String getHhh() {

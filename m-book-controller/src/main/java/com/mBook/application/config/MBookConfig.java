@@ -5,8 +5,6 @@ import com.alibaba.dubbo.config.RegistryConfig;
 import com.mBook.application.mBookInterceptor.ControllerReturnInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.method.support.HandlerMethodArgumentResolver;
-import org.springframework.web.method.support.HandlerMethodReturnValueHandler;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -17,7 +15,7 @@ public class MBookConfig implements WebMvcConfigurer {
     @Bean
     public ApplicationConfig applicationConfig() {
         ApplicationConfig applicationConfig = new ApplicationConfig();
-        applicationConfig.setName("provider-test");
+        applicationConfig.setName("m-book-controller");
         return applicationConfig;
     }
 
