@@ -1,4 +1,4 @@
-package com.mBook.application.controller.article;
+package com.mBook.application.controller.user;
 
 import com.mBook.application.model.ResponseModel;
 import com.mBook.application.model.Page;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("ariticle")
+@RequestMapping("user")
 public class UserController {
 
     @Autowired

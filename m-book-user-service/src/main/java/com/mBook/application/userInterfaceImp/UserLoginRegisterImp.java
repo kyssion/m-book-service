@@ -1,9 +1,13 @@
 package com.mBook.application.userInterfaceImp;
 
-import com.mBook.module.user.module.UserBean;
-import com.mBook.userInterface.UserLoginRegisterInterface;
 
-public class UserLoginRegisterImp implements UserLoginRegisterInterface {
+import com.alibaba.dubbo.config.annotation.Service;
+import com.mBook.module.UserBean;
+import com.mBook.userInterface.UserInterface;
+
+@Service
+public class UserLoginRegisterImp implements UserInterface {
+
     @Override
     public boolean registerUser(UserBean userBean) {
         return false;
@@ -17,5 +21,10 @@ public class UserLoginRegisterImp implements UserLoginRegisterInterface {
     @Override
     public boolean changeUserInforMation(UserBean userBean) {
         return false;
+    }
+
+    @Override
+    public UserBean getUserInfo(UserBean userBean) {
+        return new UserBean();
     }
 }

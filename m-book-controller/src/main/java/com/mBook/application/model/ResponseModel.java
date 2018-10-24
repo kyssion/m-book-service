@@ -2,11 +2,17 @@ package com.mBook.application.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.mBook.application.status.HeaderStatus;
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
+
 public class ResponseModel implements Cloneable {
+
     private HeaderStatus header;
+
     private Object body;
+
     private Page pages;
+
     public static final ResponseModel copyModel = new ResponseModel();
 
     public ResponseModel() {
@@ -82,7 +88,7 @@ public class ResponseModel implements Cloneable {
         return OtherResponseModel.getResponseModel(code, desc, null);
     }
 
-    public static ResponseModel getResponseModel(int code, String desc, Object body)  {
+    public static ResponseModel getResponseModel(int code, String desc, Object body) {
         return OtherResponseModel.getResponseModel(code, desc, body, null);
     }
 
@@ -91,4 +97,15 @@ public class ResponseModel implements Cloneable {
         return otherResponseModel;
     }
 
+}
+class He{
+    String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
